@@ -1,0 +1,165 @@
+@font-family: "Open Sans", sans-serif;
+@link-color: coral;
+@mobile-column: 1 / span 2;
+
+* {
+  font-family: @font-family;
+}
+
+a {
+  padding: 10px;
+  color: @link-color;
+
+  &:link {
+    text-decoration: none;
+  }
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+img {
+  width: 180px;
+  height: auto;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 50px 1fr 1fr 1fr 1fr 50px;
+  grid-template-rows: 20px 1fr 1fr 0.5fr;
+  gap: 1em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+}
+
+.logo-container {
+  grid-row: 2;
+  grid-column: 3 / span 2;
+}
+
+.left-box {
+  grid-row: 3;
+  grid-column: 2 / span 2;
+  align-self: center;
+  justify-self: right;
+  font-size: 13px;
+  width: 70%;
+  height: 80%;
+}
+
+.right-box {
+  grid-row: 3;
+  grid-column: 4 / span 2;
+  align-self: center;
+  justify-self: left;
+  font-size: 13px;
+  width: 70%;
+  height: 80%;
+}
+
+.input-container {
+  grid-row: 4;
+  grid-column: 3 / span 2;
+  align-self: flex-start;
+  padding: 10px;
+  height: 40%;
+}
+
+input {
+  height: 80%;
+  width: 100%;
+}
+
+button {
+  height: 80%;
+  width: 30%;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+footer {
+  display: flex;
+  padding: 20px;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+hr {
+  border-top: 1px solid black;
+}
+
+@media (max-width: 768px) {
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 0.5fr;
+    gap: 1em;
+  }
+
+  .item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+  }
+
+  .logo-container {
+    grid-row: 1;
+    grid-column: @mobile-column;
+    justify-self: center;
+  }
+
+  .left-box {
+    grid-row: 2;
+    grid-column: @mobile-column;
+    align-self: center;
+    justify-self: center;
+
+    >img {
+      max-width: 1fr;
+      height: auto;
+    }
+  }
+
+  .right-box {
+    grid-row: 3;
+    grid-column: @mobile-column;
+    align-self: center;
+    justify-self: center;
+
+    >img {
+      max-width: 1fr;
+      height: auto;
+    }
+  }
+
+  .input-container {
+    grid-row: 4;
+    grid-column: @mobile-column;
+    align-self: flex-start;
+    padding: 10px;
+    height: 40%;
+  }
+
+  input {
+    height: 80%;
+    width: 100%;
+  }
+
+  button {
+    height: 50%;
+    width: 25%;
+  }
+}

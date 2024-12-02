@@ -1,0 +1,101 @@
+* {
+  font-family: "Open Sans", sans-serif;
+}
+
+header, div {
+  padding: 10px;
+}
+
+a {
+  color: coral;
+}
+a:link {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+.top-link {
+  margin: 20px;
+}
+
+img {
+  width: 100%;
+}
+
+#top {
+  margin: 10px 0;
+  text-align: center;
+}
+
+#left, #center, #right {
+  float: left;
+}
+
+header, #top, #left, #right {
+  font-size: 1em;
+  border: 1px solid black;
+  border-radius: 3px;
+}
+
+#center {
+  font-size: 1em;
+  width: 60vw;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.sidebars {
+  overflow-x: auto;
+  width: 15vw;
+}
+
+#logo {
+  border: 1px solid black;
+  margin-left: 20px;
+  padding: 5px 15px 5px 15px;
+  font-size: 40px;
+  border-radius: 3px;
+}
+
+#search, #search-button {
+  float: right;
+  font-size: 1em;
+}
+
+#search {
+  height: 40px;
+}
+
+#search-button {
+  margin-right: 20px;
+  height: 45px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .sidebars {
+    width: 95%;
+    height: auto;
+    position: static;
+    text-align: center;
+  }
+  #center {
+    width: 95%;
+  }
+  #logo {
+    margin-left: 5px;
+    font-size: 20px;
+  }
+  #search {
+    width: 25%;
+    height: 20px;
+  }
+  #search-button {
+    margin-right: 5px;
+    height: 25px;
+  }
+}
+
+/*# sourceMappingURL=page1.css.map */

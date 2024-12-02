@@ -1,0 +1,181 @@
+* {
+  font-family: "Open Sans", sans-serif;
+}
+a {
+  color: coral;
+}
+a:link {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+header {
+  border: 1px solid black;
+  display: flex;
+  padding: 10px;
+  justify-content: space-between;
+  margin-left: auto;
+  margin-right: auto;
+}
+header > button {
+  width: 120px;
+  font-size: 1em;
+}
+button:hover {
+  cursor: pointer;
+}
+footer {
+  display: flex;
+  padding: 20px;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-left: auto;
+  margin-right: auto;
+}
+footer > .logo {
+  height: 55px;
+}
+div {
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  height: fit-content;
+  max-width: 52%;
+  margin: 0;
+}
+hr {
+  border-top: 1px solid black;
+}
+.logo {
+  border: 1px solid black;
+  margin-left: 20px;
+  padding: 5px 15px 5px 15px;
+  font-size: 40px;
+  border-radius: 3px;
+}
+.first-container {
+  font-size: 32px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.first-container > article {
+  padding: 20px;
+  max-width: 43%;
+}
+.buttons {
+  font-size: 20px;
+  width: 350px;
+  height: 60px;
+}
+.second-container {
+  height: auto;
+  background-image: url("images/page3pic2.jpg");
+  background-size: cover;
+  display: grid;
+  grid-template-areas: 'top1 top2 top3' 'ar1  ar2  ar3' 'empt but  empt2';
+  grid-template-rows: 30px 1fr 100px;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
+}
+.second-container > button {
+  grid-area: but;
+  justify-self: center;
+  align-self: flex-start;
+}
+.second-container > article {
+  border: 1px solid black;
+  justify-self: center;
+}
+.left-article {
+  grid-area: ar1;
+  justify-self: end;
+}
+.center-article {
+  grid-area: ar2;
+  justify-self: center;
+}
+.right-article {
+  grid-area: ar3;
+}
+.item {
+  background-color: white;
+  border: 1px solid black;
+  width: 320px;
+  height: 100%;
+  align-self: center;
+  padding: 10px;
+}
+.third-container {
+  height: auto;
+  display: grid;
+  grid-template-areas: 'top  top  top' 'one  two  three' 'four five 0' 'empt but empt2';
+  grid-template-rows: 0.2fr 1fr 1fr 100px;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
+}
+.third-container > b {
+  font-size: 50px;
+  grid-area: top;
+  text-align: center;
+  justify-self: center;
+}
+.third-container > button {
+  grid-area: but;
+  justify-self: center;
+  align-self: start;
+}
+.first-art {
+  grid-area: one;
+  justify-self: center;
+}
+.second-art {
+  grid-area: two;
+  justify-self: center;
+}
+.third-art {
+  grid-area: three;
+  justify-self: center;
+}
+.fourth-art {
+  grid-area: four;
+  justify-self: center;
+}
+.fifth-art {
+  grid-area: five;
+  justify-self: center;
+}
+.number {
+  font-size: 75px;
+  margin-right: 14px;
+  float: left;
+}
+@media (max-width: 768px) {
+  .logo {
+    margin-left: 5px;
+    font-size: 20px;
+  }
+  img {
+    max-width: 100%;
+    flex: 1 1 auto;
+    padding-bottom: 10px;
+  }
+  .first-container > article {
+    padding: 20px;
+    max-width: 95%;
+  }
+  .second-container {
+    height: auto;
+    grid-template-areas: 'emp' 'ar1' 'ar2' 'ar3' 'but';
+    grid-template-rows: 30px 1fr 1fr 1fr 100px;
+    grid-template-columns: 1fr;
+  }
+  .third-container {
+    grid-template-areas: 'top' 'one' 'two' 'three' 'four' 'five' 'but';
+    grid-template-rows: 0.2fr 1fr 1fr 1fr 1fr 1fr 100px;
+    grid-template-columns: 1fr;
+  }
+}
+/*# sourceMappingURL=page3.css.map */
